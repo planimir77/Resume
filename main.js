@@ -1,5 +1,8 @@
 const phoneNumber = document.getElementsByClassName('phone-number')[0];
+const printButton = document.getElementsByClassName('print-resume-button')[0];
+
 phoneNumber.addEventListener('click', onPhoneNumberClick);
+printButton.addEventListener('click', onPrintButtonClick);
 
 if (isTouchScreenDevice()) {
     setTimeout(function () {
@@ -91,6 +94,6 @@ function capitalCase(string) {
     }
     return arr.join(' ');
 }
-function printResume () {
-
+function onPrintButtonClick () {
+    window.print();
 }

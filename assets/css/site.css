@@ -416,7 +416,7 @@ body {
   display: flex;
   padding-bottom: 0.3rem;
 }
-.print-resume {
+.print-resume-button {
   position: fixed;
   bottom: 2.5rem;
   right: 5rem;
@@ -435,7 +435,7 @@ body {
   text-decoration: none;
   text-shadow: 0px 1px 0px #b23e35;
 }
-.print-resume:hover {
+.print-resume-button:hover {
   background: linear-gradient(to bottom, #ce0100 5%, #fe1a00 100%);
   background-color: #ce0100;
 }
@@ -504,7 +504,7 @@ body {
   .sheet {
     box-shadow: none;
   }
-  .print-resume {
+  .print-resume-button {
     display: none !important;
   }
   .sheet {
