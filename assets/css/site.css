@@ -68,10 +68,8 @@ body {
 }
 /* header */
 .resume-header {
-  padding-top: 1.5rem;
-  padding-bottom: 2rem;
+  padding: 1.5rem;
 }
-.resume-header,
 .resume-content {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
@@ -106,17 +104,16 @@ body {
 }
 .location-text {
   font-size: 11px;
-  padding-top: 0.4rem;
-  padding-left: 11px;
-  color: rgb(9 45 74 / 70%);
+  padding-left: 0.8rem;
+  color: #092d4ab3;
   white-space: nowrap;
 }
 .location::before {
   font-family: "Font Awesome 6 Free";
   content: "\f3c5";
   font-weight: 600;
-  font-size: 9px;
-  color: #000000cc;
+  font-size: 11px;
+  color: #6c6a6a;
   position: absolute;
 }
 .header-content {
@@ -124,9 +121,6 @@ body {
 }
 .header-content .location::before {
   padding-top: 4px;
-}
-.resume-content .location::before {
-  padding-top: 1px;
 }
 .linkedin {
   color: #0a66c2;
@@ -164,11 +158,13 @@ body {
   font-size: 15px;
   padding-right: 10px;
 }
-.logo {
+.photo {
   float: right;
+  padding-top: 1.1rem;
+  padding-right: 2rem;
 }
-.logo img {
-  width: 200px;
+.photo img {
+  width: 180px;
   border-radius: 50%;
 }
 
@@ -282,18 +278,25 @@ body {
 .container-content {
   font-size: small;
 }
-.company-period {
+.period-info {
+  display: flex;
+  padding-bottom: 0.3rem;
+  /* font-size: 10px; */
+}
+.period {
   color: #6c6a6a;
   padding-top: 1px;
   font-weight: bold;
-  font-size: 11px;
   white-space: nowrap;
 }
-.company-period::before {
+.period-text {
+  padding-left: 0.1rem;
+  font-size: 11px;
+}
+.period::before {
   font-family: "Font Awesome 6 Free";
   content: "\f073";
   font-weight: 600;
-  padding-right: 0.3rem;
   color: #000000cc;
 }
 /* SKILLS */
@@ -302,7 +305,7 @@ body {
   white-space: nowrap;
 }
 .skills-list div div {
-  border: #a4a2a2  1px solid;
+  border: #a4a2a2 1px solid;
   display: inline-block;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -351,6 +354,7 @@ body {
 .project-name {
   font-size: larger;
   font-weight: 500;
+  padding-bottom: 0.4rem;
 }
 .project-link {
   padding-top: 0.5rem;
@@ -361,11 +365,8 @@ body {
 }
 .project-link a {
   color: #7b1fa2;
-  
-  text-shadow:
-      0 0 7px #fff,
-      0 0 10px #fff,
-      0 0 21px #fff;
+
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff;
 }
 .project-link a:hover {
   color: black;
@@ -375,7 +376,6 @@ body {
   font-size: larger;
 }
 .language-level {
-  /* padding-bottom: 0.5rem; */
   color: gray;
 }
 .language-level-icon {
@@ -403,7 +403,8 @@ body {
   justify-content: space-between;
 }
 /* PASSIONS */
-.fa-swimmer, .fa-running {
+.fa-swimmer,
+.fa-running {
   font-size: 30px;
   padding-left: 0.5rem;
 }
@@ -412,10 +413,7 @@ body {
   padding-top: 0.2rem;
 }
 
-.period-info {
-  display: flex;
-  padding-bottom: 0.3rem;
-}
+
 .print-resume-button {
   position: fixed;
   bottom: 2.5rem;
@@ -444,22 +442,23 @@ body {
 .fa-file-pdf::before {
   padding: 15px;
 }
-@media screen and (max-width: 599px) {
+@media screen and (max-width: 699px) {
   .resume-header a {
-    display: block;
-  }
-  .logo {
-    float: none;
-  }
-  .logo img {
-    margin-left: auto;
-    margin-right: auto;
     display: block;
   }
   .header-content {
     float: none;
     display: flow-root;
     text-align: center;
+  }
+  .photo {
+    float: none;
+    padding-right: 0px;
+  }
+  .photo img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
   }
   .job-info {
     justify-content: center;
@@ -480,6 +479,8 @@ body {
     margin-left: auto;
     margin-right: auto;
   }
+}
+@media screen and (max-width: 599px) {
   .resume-content {
     display: block;
     column-gap: normal;
