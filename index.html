@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   \<link
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <link
       href="assets/css/fontawesome-free-6.0.0-beta2-web/css/all.css"
       rel="stylesheet"
     />
@@ -38,7 +41,7 @@
   </head>
   <body>
     <div class="sheet">
-      <button class="print-resume-button" type="button">
+      <button id="print" class="print-resume-button" type="button">
         <i class="fas fa-save"></i><i>|</i><i class="fas fa-file-pdf"></i>
       </button>
       <div class="resume-header">
@@ -68,15 +71,18 @@
               >planimir7708@gmail.com</a
             >
           </div>
-          <div class="social-links">
+          <div class="social-links flex">
             <a
               class="linkedin"
               href="https://www.linkedin.com/in/planimir-todorov-todorov"
               target="_blank"
-              >https://www.linkedin.com/in/planimir-todorov-todorov</a
+              >Linkedin</a
             >
-            <a class="github" href="https://github.com/planimir77" target="_blank"
-              >https://github.com/planimir77</a
+            <a
+              class="github"
+              href="https://github.com/planimir77"
+              target="_blank"
+              >GitHub</a
             >
           </div>
         </div>
@@ -87,10 +93,11 @@
           <div class="container">
             <h3 class="container-title">SUMMARY</h3>
             <div class="container-content">
-              Shift supervisor with over 15 years of experience in the plastic recycling industry, 
-              seeks an internship or entry-level opportunity as a developer to expand skills 
-              and gain real-world experience. Strong work ethics, 
-              positive, honest, loyal, hard-working, eagerness to learn.
+              Certified JavaScript Web developer with over 15 years of
+              experience in the plastic recycling industry, seeks an internship
+              or entry-level opportunity as a developer to expand skills and
+              gain real-world experience. Strong work ethics, positive, honest,
+              loyal, hard-working, eagerness to learn.
             </div>
           </div>
           <!-- EXPERIENCE -->
@@ -101,7 +108,7 @@
               <div class="company-name">VADIAS Recycling Ltd</div>
               <div class="period-info">
                 <div class="period">
-                  <span>12/2006 - Present</span>
+                  <span class="period-text">12/2006 - Present</span>
                 </div>
                 <div class="location">
                   <span class="location-text">Sofia, Bulgaria</span>
@@ -153,38 +160,12 @@
             <h3 class="container-title">EDUCATION</h3>
             <div class="container-education">
               <div class="container-education-content">
-                <div class="container-education-name">
-                  Computer Software Engineering
-                </div>
-                <div class="company-name">Software University softuni.bg</div>
-                <div class="period-info">
-                  <div class="period">
-                    <span class="period-text">09/2018 - 12/2020</span>
-                    </div>
-                  <div class="location">
-                    <span class="location-text">Sofia, Bulgaria</span>
-                  </div>
-                </div>
-              </div>
-              <div class="gpa-container">
-                <div class="gpa-pipe"></div>
-                <div class="grade-point-average">
-                  <div class="text-center">
-                    <div class="grade-point-average-title">GPA</div>
-                    <div class="grade-point"><span>5.20</span> / 6.0</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="line"></div>
-            <div class="container-education">
-              <div class="container-education-content">
                 <div class="container-education-name">Electrician</div>
                 <div class="company-name">Vasil Levski High School</div>
                 <div class="period-info">
                   <div class="period">
                     <span class="period-text">09/1992 - 06/1995</span>
-                    </div>
+                  </div>
                   <div class="location">
                     <span class="location-text">Vidin, Bulgaria</span>
                   </div>
@@ -199,6 +180,45 @@
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+          <!-- LICENSES & CERTIFICATIONS -->
+          <div class="container">
+            <h3 class="container-title">LICENSES & CERTIFICATIONS</h3>
+            <div class="container-education">
+              <div class="container-education-content">
+                <div class="container-education-name">
+                  JavaScript Web Developer
+                </div>
+                <div class="company-name">Software University (SoftUni)</div>
+                <div class="period-info">
+                  <div class="period-licenses">
+                    <span class="period-text"
+                      >Issued 02/2021 · No Expiration Date</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="gpa-container">
+                <div class="gpa-pipe"></div>
+                <div class="grade-point-average">
+                  <div class="text-center">
+                    <div class="grade-point-average-title">GPA</div>
+                    <div class="grade-point"><span>5.20</span> / 6.0</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <a
+                class="credential"
+                target="_blank"
+                aria-label="See credential for JS Web Developer"
+                href="https://softuni.bg/certificates/details/97534/0854499a"
+              >
+                <span>See credential</span>
+              </a>
             </div>
           </div>
         </section>
@@ -252,7 +272,7 @@
               <div class="period-info">
                 <div class="period">
                   <span class="period-text">2020</span>
-                  </div>
+                </div>
                 <div class="location">
                   <span class="location-text">Sofia, Bulgaria</span>
                 </div>
@@ -261,8 +281,11 @@
                 My defense project for the Front-End Framework course.
               </div>
               <div class="project-link">
-                <a href="https://x-shopping-list.herokuapp.com"
-                  >https://x-shopping-list.herokuapp.com</a
+                <a
+                  target="_blank"
+                  aria-label="See project X-Shopping-List"
+                  href="https://x-shopping-list.herokuapp.com"
+                  >See more</a
                 >
               </div>
             </div>
