@@ -4,6 +4,10 @@ const printButton = document.getElementsByClassName('print-resume-button')[0];
 phoneNumber.addEventListener('click', onPhoneNumberClick);
 printButton.addEventListener('click', onPrintButtonClick);
 
+if (isMobileDevice()) {
+    printButton.style.visibility = 'hidden';
+}
+
 if (isTouchScreenDevice()) {
     setTimeout(function () {
         if (isOnScreen(phoneNumber)) {
