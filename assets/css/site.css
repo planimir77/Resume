@@ -28,33 +28,25 @@ html {
   scroll-behavior: smooth;
 }
 
-/* CSS Resets */
-* {
-  /* margin: 0; */
-  /* padding: 0; */
-  box-sizing: border-box;
-}
-
 ul {
   list-style-type: none;
 }
 
 a {
   text-decoration: none;
-  color: var(--primary-color);
+  color: black;
+  border-radius: 4px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 a:hover {
-  color: var(--secondary-color);
+  background-color: #ddd;
 }
 
 body {
   font-family: var(--font-family);
 }
-
-/* body {
-  font-family: "Roboto", sans-serif;
-} */
 
 .sheet {
   margin: auto;
@@ -105,15 +97,15 @@ body {
 .location-text {
   font-size: 11px;
   padding-left: 0.8rem;
-  color: #092d4ab3;
+  color: gray;
   white-space: nowrap;
 }
 .location::before {
   font-family: "Font Awesome 6 Free";
   content: "\f3c5";
   font-weight: 600;
-  font-size: 11px;
-  color: #6c6a6a;
+  font-size: 12px;
+  color: dimgray;
   position: absolute;
 }
 .header-content {
@@ -131,6 +123,10 @@ body {
   font-weight: 500;
   font-size: 15px;
   padding-right: 10px;
+  color: #0a66c2;
+}
+.name {
+  padding-bottom: 1rem;
 }
 .name h1 {
   margin-left: 0.1rem;
@@ -157,6 +153,7 @@ body {
   font-weight: 500;
   font-size: 15px;
   padding-right: 10px;
+  color: black;
 }
 .photo {
   float: right;
@@ -170,7 +167,6 @@ body {
 
 .resume-header a:hover {
   background-color: #ddd;
-  color: black;
 }
 
 .header-content {
@@ -184,12 +180,12 @@ body {
   justify-content: space-between;
 }
 .job-position {
-  color: dodgerblue;
+  color: var(--primary-color);
   font-size: large;
   font-weight: bold;
 }
 .social-links {
-  display: contents;
+  justify-content: space-evenly;
 }
 
 .tooltip {
@@ -237,7 +233,8 @@ body {
   width: 45%;
 }
 .container {
-  padding-bottom: 1rem;
+  padding-bottom: 1.8rem;
+  page-break-inside: avoid;
 }
 .container .grade-point-average {
   padding-top: 0.6rem;
@@ -253,7 +250,7 @@ body {
 }
 .gpa-pipe {
   margin-top: 2.5rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.3rem;
   border-left: 2px solid #a4a2a2;
 }
 .line {
@@ -272,7 +269,7 @@ body {
 .company-name {
   font-size: smaller;
   font-weight: 500;
-  color: dodgerblue;
+  color: var(--primary-color);
   padding-bottom: 0.4rem;
 }
 .container-content {
@@ -281,10 +278,10 @@ body {
 .period-info {
   display: flex;
   padding-bottom: 0.3rem;
-  /* font-size: 10px; */
 }
-.period {
-  color: #6c6a6a;
+.period,
+.period-licenses {
+  color: dimgray;
   padding-top: 1px;
   font-weight: bold;
   white-space: nowrap;
@@ -297,7 +294,7 @@ body {
   font-family: "Font Awesome 6 Free";
   content: "\f073";
   font-weight: 600;
-  color: #000000cc;
+  color: dimgray;
 }
 /* SKILLS */
 .skills-list {
@@ -318,7 +315,6 @@ body {
 /* EDUCATION */
 .grade-point {
   padding-top: 0.6rem;
-  line-height: 2.5rem;
   font-size: smaller;
 }
 .grade-point span {
@@ -326,8 +322,8 @@ body {
 }
 .grade-point-average-title {
   font-size: x-small;
-  padding-top: 0.3rem;
-  color: #000000cc;
+  padding-top: 1.2rem;
+  color: dimgray;
   font-weight: bold;
 }
 .gpa-container {
@@ -350,6 +346,14 @@ body {
   font-weight: 500;
   white-space: nowrap;
 }
+/* LICENSES & CERTIFICATIONS */
+.credential {
+  font-size: 14px;
+  font-weight: 500;
+  color: #7b1fa2;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+}
 /* PROJECTS */
 .project-name {
   font-size: larger;
@@ -358,15 +362,13 @@ body {
 }
 .project-link {
   padding-top: 0.5rem;
-  display: inline-block;
-  white-space: nowrap;
   font-weight: 500;
   font-size: 14px;
 }
 .project-link a {
   color: #7b1fa2;
-
-  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
 }
 .project-link a:hover {
   color: black;
@@ -395,7 +397,7 @@ body {
   font-size: small;
 }
 .blue {
-  color: dodgerblue;
+  color: var(--primary-color);
 }
 .language-content {
   margin-bottom: 0.5rem;
@@ -412,8 +414,6 @@ body {
   font-size: larger;
   padding-top: 0.2rem;
 }
-
-
 .print-resume-button {
   position: fixed;
   bottom: 2.5rem;
@@ -442,10 +442,17 @@ body {
 .fa-file-pdf::before {
   padding: 15px;
 }
-@media screen and (max-width: 699px) {
-  .resume-header a {
-    display: block;
+@media screen and (min-width: 700px) {
+  .resume-header {
+    min-height: 180px;
   }
+}
+@media screen and (min-width: 800px) {
+  .sheet {
+    padding: 2.5rem;
+  }
+}
+@media screen and (max-width: 699px) {
   .header-content {
     float: none;
     display: flow-root;
@@ -502,13 +509,37 @@ body {
   }
 }
 @media print {
+  .photo {
+    margin-right: 0px;
+  }
   .sheet {
     box-shadow: none;
+    margin: 0px;
+    padding: 0px;
   }
   .print-resume-button {
     display: none !important;
   }
-  .sheet {
-    margin-bottom: 0px;
+  .resume-header {
+    padding-top: 0px;
+  }
+  .social-links {
+    display: contents;
+    text-align-last: left;
+  }
+  @page {
+    margin-top: 2cm;
+  }
+  a:link,
+  a:visited {
+    background: transparent;
+    color: #520;
+    font-weight: bold;
+  }
+  /* a:link {
+    page-break-inside: avoid;
+  } */
+  a[href^="http"]:after {
+    content: " on " attr(href);
   }
 }
