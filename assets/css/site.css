@@ -351,8 +351,9 @@ body {
   font-size: 14px;
   font-weight: 500;
   color: #7b1fa2;
-  padding-top: 0.3rem;
-  padding-bottom: 0.3rem;
+}
+.credential-container {
+  padding-bottom: 0.6rem;
 }
 .softuni-logo {
   display:flex;
