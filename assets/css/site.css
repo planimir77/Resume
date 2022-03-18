@@ -92,6 +92,7 @@ body {
   color: green;
 }
 .location {
+  padding-top: 0.1rem;
   margin-left: 20px;
 }
 .location-text {
@@ -282,7 +283,6 @@ body {
 .period,
 .period-licenses {
   color: dimgray;
-  padding-top: 1px;
   font-weight: bold;
   white-space: nowrap;
 }
@@ -362,7 +362,7 @@ body {
   background-image: url("https://media-exp1.licdn.com/dms/image/C4D0BAQEApCWzd7I27g/company-logo_100_100/0/1519952435193?e=1654128000&v=beta&t=bIvLrtPPwfcOmyUTe6MGvG_6Ro9ummerv6ZUScMlFLs");
   background-size: 30px 30px;
   position: relative; 
-  left: 10px;
+  left: 1rem;
   width: 30px;
   height: 30px;
   content: "";
@@ -419,7 +419,8 @@ body {
 }
 /* PASSIONS */
 .fa-swimmer,
-.fa-running {
+.fa-running,
+.fa-laptop-code {
   font-size: 30px;
   padding-left: 0.5rem;
 }
@@ -459,6 +460,9 @@ body {
   .resume-header {
     min-height: 180px;
   }
+  .location-text {
+    padding-right: 0.5rem;
+  }
 }
 @media screen and (min-width: 800px) {
   .sheet {
@@ -466,14 +470,14 @@ body {
   }
 }
 @media screen and (max-width: 699px) {
+  .photo {
+    float: none;
+    padding-right: 0px;
+  }
   .header-content {
     float: none;
     display: flow-root;
     text-align: center;
-  }
-  .photo {
-    float: none;
-    padding-right: 0px;
   }
   .photo img {
     margin-left: auto;
@@ -549,9 +553,6 @@ body {
     color: #520;
     font-weight: bold;
   }
-  /* a:link {
-    page-break-inside: avoid;
-  } */
   a[href^="http"]:after {
     content: " on " attr(href);
   }
