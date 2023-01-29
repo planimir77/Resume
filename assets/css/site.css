@@ -235,7 +235,7 @@ body {
 }
 .container {
   padding-bottom: 1.8rem;
-  page-break-inside: avoid;
+  /* page-break-inside: avoid; */
 }
 .container .grade-point-average {
   padding-top: 0.6rem;
